@@ -15,11 +15,6 @@ use app_modules::{
 };
 
 #[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
-
-#[tauri::command]
 async fn export(handle: tauri::AppHandle) {
   let export_window = tauri::WindowBuilder::new(
     &handle,

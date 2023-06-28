@@ -61,10 +61,11 @@
       
       //console.log(formData.field1);
 
-      let tmp1 = document.getElementById('pressure1').value;
-      let tmp2 = document.getElementById('pressure2').value;
-      let tmp3 = document.getElementById('temperature1').value;
-      let tmp4 = document.getElementById('temperature2').value;
+      let tmp1 = (document.getElementById('pressure1') as HTMLInputElement).value;
+      let tmp2 = (document.getElementById('pressure2') as HTMLInputElement).value;
+      let tmp3 = (document.getElementById('temperature1') as HTMLInputElement).value;
+      let tmp4 = (document.getElementById('temperature2') as HTMLInputElement).value;
+
 
       let p1: number = +tmp1;
       let p2: number = +tmp2;
