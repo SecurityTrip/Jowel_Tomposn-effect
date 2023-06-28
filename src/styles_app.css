@@ -1,0 +1,135 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: black;
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Стили для navbar */
+.navbar {
+  background-color: #f6f6f6;
+  color: black;
+  padding: 10px;
+}
+
+/* Стили для выпадающего списка */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container {
+  margin: auto;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+.svg-element {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  padding: auto;
+  font-size: large;
+  display: flex;
+}
+
+.rectangle-1 {
+  margin-top: 15px;
+}
+
+.rectangle-3 {
+  margin-top: 15px;
+}
+
+.input-calc{
+  padding: auto;
+  margin: auto;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-container {
+  margin: auto;
+  display: flex;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield; /* Для Firefox */
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: auto;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    margin-left: 5%;
+    padding: auto;
+    content: "";
+    display: table;
+    clear: both;
+  }
