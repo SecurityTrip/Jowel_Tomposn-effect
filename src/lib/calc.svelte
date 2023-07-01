@@ -1,6 +1,5 @@
 <script lang="ts">
     import { invoke } from "@tauri-apps/api/tauri"
-    import { onMount } from 'svelte';
 
     const optionsP = [
     { id: 1, label: 'Па' },
@@ -52,14 +51,7 @@
     }
   }
 
-
-  
-
-  
-    async function calculate(){
-      // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-      
-      //console.log(formData.field1);
+  async function calculate(){
 
       let tmp1 = (document.getElementById('pressure1') as HTMLInputElement).value;
       let tmp2 = (document.getElementById('pressure2') as HTMLInputElement).value;
@@ -72,11 +64,6 @@
       let t1: number = +tmp3;
       let t2: number = +tmp4;
 
-      console.log(p1);
-      //console.log(p2);
-      //console.log(t1);
-      //console.log(t2);
-
       const convertedP1 = convertToPascal(p1, formData.field1);
       p1 = convertedP1;
       const convertedP2 = convertToPascal(p2, formData.field2);
@@ -85,11 +72,6 @@
       t1 = convertedT1;
       const convertedT2 = convertToKelvin(t2, formData.field4);
       t2 = convertedT2;
-
-      console.log(p1);
-      //console.log(p2);
-      //console.log(t1);
-      //console.log(t2);
 
       await invoke("run_calculation", {p1, p2, t1, t2});
       
@@ -101,6 +83,11 @@
   </script>
   
   <div class = "row">
+
+    <div class="gas">
+      <h4>Укажите состав газа</h4>
+    </div>
+
     <form on:submit|preventDefault={calculate}>
       <div class="column">
         <div class="form-row">

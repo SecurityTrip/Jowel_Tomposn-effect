@@ -109,27 +109,23 @@ h2 {
 }
 
 input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
-  input[type="number"] {
-    -moz-appearance: textfield; /* Для Firefox */
-  }
+.column {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: auto;
+}
 
-  .column {
-    float: left;
-    width: 50%;
-    margin: auto;
-    padding: auto;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    margin-left: 5%;
-    padding: auto;
-    content: "";
-    display: table;
-    clear: both;
-  }
+/* Clear floats after the columns */
+.row:after {
+  margin-left: 5%;
+  padding: auto;
+  content: "";
+  display: table;
+  clear: both;
+}
